@@ -66,6 +66,8 @@ int lerOpcao(int minimo, int maximo) {
     int modalidade;
     int protecao;
     int tentativas;
+    float distancia;
+    float peso;
 
     printf("\nEscolha a modalidade:\n");
         printf("1 - Economica\n");
@@ -89,4 +91,11 @@ int lerOpcao(int minimo, int maximo) {
             }
 
         } while (tentativas < 0);
+
+        printf("\n----- DADOS DA ENTREGA -----\n");
+        printf("Distancia: %.2f km\n", distancia);
+        printf("Peso: %.2f kg\n", peso);
+        printf("Modalidade: %d\n", modalidade);
+        printf("Protecao: %d\n", protecao);
+        printf("Tentativas adicionais: %d\n", tentativas);
     }
