@@ -48,3 +48,45 @@ int main(void) {
 
     return 0;
 }
+int lerOpcao(int minimo, int maximo) {
+    int opcao;
+
+    do {
+        scanf("%d", &opcao);
+
+        if (opcao < minimo || opcao > maximo) {
+            printf("Opcao invalida. Digite novamente: ");
+        }
+
+    } while (opcao < minimo || opcao > maximo);
+
+    return opcao;
+
+
+    int modalidade;
+    int protecao;
+    int tentativas;
+
+    printf("\nEscolha a modalidade:\n");
+        printf("1 - Economica\n");
+        printf("2 - Expressa\n");
+        printf("3 - Prioritaria\n");
+        printf("Opcao: ");
+        modalidade = lerOpcao(1, 3);
+
+        printf("\nDeseja adicionar protecao?\n");
+        printf("0 - Nao\n");
+        printf("1 - Sim\n");
+        printf("Opcao: ");
+        protecao = lerOpcao(0, 1);
+
+        do {
+            printf("\nQuantidade de tentativas adicionais: ");
+            scanf("%d", &tentativas);
+
+            if (tentativas < 0) {
+                printf("A quantidade nao pode ser negativa.\n");
+            }
+
+        } while (tentativas < 0);
+    }
